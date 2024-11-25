@@ -1,0 +1,39 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Estilo para el contenedor del juego */
+.container {
+    max-width: 700px;
+    margin-top: 40px;
+}
+
+/* Estilos para las preguntas y opciones */
+#question-container {
+    display: block;
+}
+
+#score-container {
+    text-align: center;
+}
+
+/* Botones personalizados */
+button {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Puntuación */
+#score-text {
+    font-size: 1.2rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}

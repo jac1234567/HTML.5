@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntados ProA</title>
+    <!-- Vincular Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vincular archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Juego de Preguntas</h1>
+
+        <!-- Formulario para ingresar los datos del ganador -->
+        <div id="question-container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="quiz-form">
+                        <div class="mb-3">
+                            <label for="question-text" class="form-label">Pregunta</label>
+                            <p id="question-text" class="form-text"></p>
+                        </div>
+
+                        <div id="options-container" class="mb-4"></div>
+
+                        <button type="button" id="prev-button" class="btn btn-secondary" onclick="navigate('prev')" style="display:none;">Anterior</button>
+                        <button type="button" id="next-button" class="btn btn-primary" onclick="navigate('next')">Siguiente</button>
+                        <button type="button" id="finish-button" class="btn btn-success" onclick="endGame()" style="display:none;">Finalizar</button> <!-- Nuevo botón de finalizar -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Resultados (Podio) -->
+        <div id="score-container" style="display:none;">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2>¡Juego terminado!</h2>
+                    <p id="score-text" class="lead"></p>
+                    <button id="restart-button" class="btn btn-success" onclick="restartGame()">Reiniciar Juego</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vincular archivo JavaScript -->
+    <script src="script.js"></script>
+    <!-- Vincular Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
